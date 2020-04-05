@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>new article</title>
+    <url>/2020/03/24/new-article/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>悼念日大学官网样式，及我的第一篇博客</title>
+    <url>/2020/04/06/gray-css/</url>
+    <content><![CDATA[<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>​        这是第一篇博客，之前有搭建过WordPress，但是有段时间服务器被删库，还没做备份，后来腾讯云服务器到期没续费，索性放弃了这个想法。正好也没写几篇，乘着疫情期间空闲时间比较多，所以搭建了这个基于Hexo和Github Pages的静态博客，之前的学过的内容和遇见的问题，如果再次遇到，会慢慢的补充在博客上。</p>
+<h1 id="关于2020年4月4日哀悼日"><a href="#关于2020年4月4日哀悼日" class="headerlink" title="关于2020年4月4日哀悼日"></a>关于2020年4月4日哀悼日</h1><p>​        没啥说的，清明期间悼念烈士和同胞。有网站要改成黑白灰色调的要求，因为我是大学的官网的制作人之一（当然是基于站群系统的，我只做了前端），所以应领导要求改样式。一开始我是想着单独写一个CSS，把图片都ps处理之后替换，还专门让老师把文章的插图也换了灰色，但后来想想太麻烦了，网上果然有现成的例子。</p>
+<h1 id="filter（滤镜）"><a href="#filter（滤镜）" class="headerlink" title="filter（滤镜）"></a>filter（滤镜）</h1><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">BasicImage</span>(grayscale=<span class="number">1</span>);</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">-moz-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">-ms-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">-o-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">filter</span>: progid:DXImageTransform.Microsoft.<span class="built_in">BasicImage</span>(grayscale=<span class="number">1</span>);</span><br><span class="line">    <span class="attribute">filter</span>: gray;</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">1</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        原理就一个<a href="https://www.runoob.com/cssref/css3-pr-filter.html" target="_blank" rel="noopener">filter</a>，就是滤镜。这么多行也是为了兼容不同浏览器，grayscale(100%)是css3的新标准，用于定义网站的灰度，剩下的代码都是用于ie兼容，但只能兼容到ie6-9，这是一个挺麻烦的问题，ie10和11无法生效。</p>
+<p>​        也有考虑过用grayscale.js处理，但是这个js速度太慢，学校官网数据挺多，一卡就是三分钟，完全不行，最后只能手写了一部分样式，让小伙伴处理了几个背景图，然后这天过了再回滚回之前彩色的样子。</p>
+<p>​        ie10和11虽然比起ie6789有了很大提升，但是依旧不尽人意，毕竟是多年前的产物，但学校领导们用的人不少，给学校打个工总能遇到ie678的奇葩，国产浏览器也总喜欢用兼容模式，属实给人增添烦恼。</p>
+<blockquote>
+<p>新事物之所以必然战胜旧事物，从根本上说是由于新事物较旧事物更符合事物发展的必然趋势。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>日常随笔</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>前端</tag>
+        <tag>心情</tag>
+      </tags>
+  </entry>
+</search>
