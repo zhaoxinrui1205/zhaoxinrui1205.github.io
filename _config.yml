@@ -3,20 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Code Life
+subtitle: 'Talking is cheap,show me the code'
+description: '个人博客站，还在路上的学生'
 keywords:
 author: Zhao Xinrui
-language: en
+language: zh-Hans
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.zhaoxinrui.cn
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink_defaults: http://www.zhaoxinrui.cn
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -102,3 +102,7 @@ deploy:
   repository: git@github.com:zhaoxinrui1205/zhaoxinrui1205.github.io.git
   branch: master
   
+sitemap: 
+  path: sitemap.xml
+baidusitemap: 
+  path: baidusitemap.xml
