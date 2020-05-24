@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,后端,jwt,身份验证,前后端分离," />
 
 
 
@@ -85,14 +85,23 @@
 
 
 
-<meta name="description" content="个人博客站，还在路上的学生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Code Life">
-<meta property="og:url" content="http://www.zhaoxinrui.cn/archives/2020/index.html">
+<meta name="description" content="前后端分离中的身份验证在过去的或较为简单的web项目中，通常不采用前后端分离的架构，这样的编写简单，利于seo，但是不利于维护，也不适用于团队的开发模式，由此越来越多的团队开始采用前后端分离的模式进行开发。 在前后端不分离时，关于身份验证或数据缓存大多使用session进行。 Session和Cookiecookie是一段不超过4KB的小型文本数据，由一个名称（Name）、一个值（Value）和其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端分离中的身份验证解决方案——jwt(JSON Web Token)">
+<meta property="og:url" content="http://www.zhaoxinrui.cn/2020/05/21/jwt/index.html">
 <meta property="og:site_name" content="Code Life">
-<meta property="og:description" content="个人博客站，还在路上的学生">
+<meta property="og:description" content="前后端分离中的身份验证在过去的或较为简单的web项目中，通常不采用前后端分离的架构，这样的编写简单，利于seo，但是不利于维护，也不适用于团队的开发模式，由此越来越多的团队开始采用前后端分离的模式进行开发。 在前后端不分离时，关于身份验证或数据缓存大多使用session进行。 Session和Cookiecookie是一段不超过4KB的小型文本数据，由一个名称（Name）、一个值（Value）和其">
+<meta property="og:image" content="http://imagezxr.test.upcdn.net/blogimg/2020-05/jwt1.png">
+<meta property="article:published_time" content="2020-05-21T05:00:12.000Z">
+<meta property="article:modified_time" content="2020-05-24T17:30:17.029Z">
 <meta property="article:author" content="Zhao Xinrui">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="jwt">
+<meta property="article:tag" content="身份验证">
+<meta property="article:tag" content="前后端分离">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://imagezxr.test.upcdn.net/blogimg/2020-05/jwt1.png">
 
 
 
@@ -122,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://www.zhaoxinrui.cn/archives/2020/"/>
+  <link rel="canonical" href="http://www.zhaoxinrui.cn/2020/05/21/jwt/"/>
 
 
 
 
 
-  <title>归档 | Code Life</title>
+  <title>前后端分离中的身份验证解决方案——jwt(JSON Web Token) | Code Life</title>
   
 
 
@@ -147,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,222 +284,229 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhaoxinrui.cn/2020/05/21/jwt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhao Xinrui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code Life">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">前后端分离中的身份验证解决方案——jwt(JSON Web Token)</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-21T13:00:12+08:00">
+                2020-05-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
 
-      
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2020">2020</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/21/jwt/" itemprop="url">
-              
-                <span itemprop="name">前后端分离中的身份验证解决方案——jwt(JSON Web Token)</span>
-              
-            </a>
-        
-      </h3>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-21T13:00:12+08:00"
-              content="2020-05-21" >
-          05-21
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/04/20/element-table/" itemprop="url">
-              
-                <span itemprop="name">element ui中table的多选selection会被重置的问题</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-20T16:17:26+08:00"
-              content="2020-04-20" >
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h1 id="前后端分离中的身份验证"><a href="#前后端分离中的身份验证" class="headerlink" title="前后端分离中的身份验证"></a>前后端分离中的身份验证</h1><p>在过去的或较为简单的web项目中，通常不采用前后端分离的架构，这样的编写简单，利于seo，但是不利于维护，也不适用于团队的开发模式，由此越来越多的团队开始采用前后端分离的模式进行开发。</p>
+<p>在前后端不分离时，关于身份验证或数据缓存大多使用session进行。</p>
+<h1 id="Session和Cookie"><a href="#Session和Cookie" class="headerlink" title="Session和Cookie"></a>Session和Cookie</h1><p>cookie是一段不超过4KB的小型文本数据，由一个名称（Name）、一个值（Value）和其它几个用于控制Cookie有效期、安全性、使用范围的可选属性组成。存储在客户端（浏览器），如果设置了过期时间，则过期后会销毁，如果没设置过期时间，则关闭浏览器后会销毁。</p>
+<p>session和cookie的最大区别就是，session是存储在服务端的数据，同时，会向客户端下发一份sessionid，用于辨识用户身份</p>
+<p><img src="http://imagezxr.test.upcdn.net/blogimg/2020-05/jwt1.png" alt="sessionid"></p>
+<p>通过sessionid，获取存储在session中的用户信息，进行业务逻辑。</p>
+<p>这是在前后端不分离的情况下的一种身份验证解决方案。</p>
+<h1 id="token——前后端分离中的身份信息传递"><a href="#token——前后端分离中的身份信息传递" class="headerlink" title="token——前后端分离中的身份信息传递"></a>token——前后端分离中的身份信息传递</h1><p>在前后端分离的项目中，通常使用基于token的令牌方式进行身份验证。</p>
+<p>使用token有以下好处：</p>
+<ol>
+<li>跨域 / CORS: cookies + CORS 并不能跨不同的域名.而基于令牌能够使用 AJAX 调用服务器，在任何域名下你都可以使用HTTP header头部来传输用户信息。</li>
+<li>无态(代表<a href="https://www.baidu.com/s?wd=服务器端&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">服务器端</a>可伸缩): 没有必要将会话保存，令牌 token 自己是一个自我包容的实体，包含用户各种信息，其他状态信息可以保存在cookie或客户端本地存储器中。可以有效的降低服务器的压力。</li>
+<li>token不只能应用于web，也可以应用于不同的其他平台（包括但不限于windows，ios，Android），在这些平台中不包含cookie或cookie不是一个优秀的解决方案。</li>
+</ol>
+<h1 id="JWT——Json-Web-Token"><a href="#JWT——Json-Web-Token" class="headerlink" title="JWT——Json Web Token"></a>JWT——Json Web Token</h1><p>jwt是一款基于json的token类型，一个基本的jwt应该是以下格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</span><br></pre></td></tr></table></figure>
 
-        
-        
+<p>这段jwt是由以下这段json加密：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"alg"</span>: <span class="string">"HS256"</span>,</span><br><span class="line">  <span class="attr">"typ"</span>: <span class="string">"JWT"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"sub"</span>: <span class="string">"1234567890"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"John Doe"</span>,</span><br><span class="line">  <span class="attr">"iat"</span>: <span class="number">1516239022</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
+<p>jwt按 . 进行分割，可以看出分为三部分。</p>
+<h4 id="header部分"><a href="#header部分" class="headerlink" title="header部分"></a>header部分</h4><p>第一部分是jwt的头部（HEADER），用于描述jwt的加密方式和token类型。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"alg"</span>: <span class="string">"HS256"</span>,</span><br><span class="line">  <span class="attr">"typ"</span>: <span class="string">"JWT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>将以上json转化为字符串，在进行base64Url加密。</p>
+<h4 id="payload部分"><a href="#payload部分" class="headerlink" title="payload部分"></a>payload部分</h4><p>第二部分是jwt的内容（有效载荷），用于存放jwt的内容。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"sub"</span>: <span class="string">"1234567890"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"John Doe"</span>,</span><br><span class="line">  <span class="attr">"iat"</span>: <span class="number">1516239022</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/04/06/gray-css/" itemprop="url">
-              
-                <span itemprop="name">悼念日大学官网样式，及我的第一篇博客</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-06T01:58:31+08:00"
-              content="2020-04-06" >
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>同样，将以上json转化为字符串，在进行base64Url加密。JWT指定七个默认字段供选择。</p>
+<p>iss：发行人</p>
+<p>exp：到期时间</p>
+<p>sub：主题</p>
+<p>aud：用户</p>
+<p>nbf：在此之前不可用</p>
+<p>iat：发布时间</p>
+<p>jti：JWT ID用于标识该JWT</p>
+<p>除此之外，jwt同样允许自定义字段。</p>
+<h4 id="签名部分"><a href="#签名部分" class="headerlink" title="签名部分"></a>签名部分</h4><p>第三部分是jwt的签名部分。在jwt的前两部分，信息都是可以被解密的（base64并不是一个不可逆加密），所以要求我们在第二部分存储个人信息时，不要存储过于私密的信息（例如密码）。</p>
+<p>这一部分将前两部分的加密内容拼接起来，并进行hs256加密（在header部分定义的加密方式）。但是，要保证我们的jwt不会被别有用心的人任意修改，我们必须要在jwt中加盐。截止现在，我们能做的，客户端都可以解析并修改。加盐，就是在秘文中混入一段随机字符（储存在服务端，并且不能被人知道）。之后，第三步，对hs256加密后的密文进行base64url加密。</p>
+<p>此时，用户即使修改了密文，在服务端校验时，将获取的token的一二部分结合服务端存储的“盐”进行加密，与第三部分进行对比，如果对比结果不一致，说明用户非法修改过token的值，如果校验通过，则依照业务逻辑继续操作。即使用户知道我们使用了jwt并了解其加密方式，但缺少储存在服务端的secret字符串，就无法通过服务端的验证。</p>
+<p>通常情况下，token存在于cookie，header或携带的token参数中。</p>
+<p>通过jwt的<a href="https://jwt.io/" target="_blank" rel="noopener">官网</a>，我们可以快速解析一个jwt字符串，或者获取基于各种语言的jwt插件。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/24/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-24T12:24:14+08:00"
-              content="2020-03-24" >
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/24/new-article/" itemprop="url">
-              
-                <span itemprop="name">new article</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-24T03:02:09+08:00"
-              content="2020-03-24" >
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          
+            <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
+          
+            <a href="/tags/jwt/" rel="tag"># jwt</a>
+          
+            <a href="/tags/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/" rel="tag"># 身份验证</a>
+          
+            <a href="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" rel="tag"># 前后端分离</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/20/element-table/" rel="next" title="element ui中table的多选selection会被重置的问题">
+                <i class="fa fa-chevron-left"></i> element ui中table的多选selection会被重置的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -498,6 +514,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -518,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,6 +639,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前后端分离中的身份验证"><span class="nav-number">1.</span> <span class="nav-text">前后端分离中的身份验证</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Session和Cookie"><span class="nav-number">2.</span> <span class="nav-text">Session和Cookie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#token——前后端分离中的身份信息传递"><span class="nav-number">3.</span> <span class="nav-text">token——前后端分离中的身份信息传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JWT——Json-Web-Token"><span class="nav-number">4.</span> <span class="nav-text">JWT——Json Web Token</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#header部分"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">header部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#payload部分"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">payload部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#签名部分"><span class="nav-number">4.0.0.3.</span> <span class="nav-text">签名部分</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -750,6 +795,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
